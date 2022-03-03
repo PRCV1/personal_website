@@ -1,9 +1,9 @@
 <template>
-    <section class="mb-5 p-4" :class="[ThemeSwitcher.isDarkmode.value ? 'bg-dark' : 'bg-secondary']" >
-        <h2 :class="[ThemeSwitcher.isDarkmode.value ? 'text-white' : 'text-dark']">
-            {{ title }}
+    <section class="mb-5 p-4" :class="[isDarkmode ? 'bg-dark' : 'bg-secondary']" >
+        <h2 :class="[isDarkmode ? 'text-white' : 'text-dark']">
+            {{ title }} {{ isDarkmode }}
         </h2>
-        <div :class="[ThemeSwitcher.isDarkmode.value ? 'text-white-50' : 'text-dark']">
+        <div :class="[isDarkmode ? 'text-white-50' : 'text-dark']">
             <slot></slot>
         </div>
     </section>
@@ -11,7 +11,9 @@
 
 <script setup lang="ts">
 
-import ThemeSwitcher from '../helper/ThemeSwitcher';
+import { useDarkmode } from "../helper/useDarkmode"
+
+const { isDarkmode } = useDarkmode()
 
 defineProps({
     title: {

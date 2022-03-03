@@ -3,7 +3,7 @@
         <li
             v-for="(item, index) in edus"
             :key="index"
-            :class="[ThemeSwitcher.isDarkmode.value ? 'text-white-50' : 'text-dark']"
+            :class="[isDarkmode ? 'text-white-50' : 'text-dark']"
             class="border-0 list-group-item list-group-item-dark bg-transparent d-flex justify-content-between align-items-start"
         >
             <div class="ms-2 me-auto">
@@ -20,7 +20,9 @@
 <script setup lang="ts">
 
 import { onMounted, ref, Ref } from "vue";
-import ThemeSwitcher from "../helper/ThemeSwitcher"
+import { useDarkmode } from "../helper/useDarkmode"
+
+const { isDarkmode } = useDarkmode()
 
 interface IEducation {
     name: String,

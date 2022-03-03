@@ -4,7 +4,7 @@
         <div class="list-group" v-for="(item, index) in projects" :key="index">
             <div
                 class="list-group-item border-0 bg-transparent"
-                :class="[ThemeSwitcher.isDarkmode.value ? 'text-white-50' : 'text-dark']"
+                :class="[isDarkmode ? 'text-white-50' : 'text-dark']"
                 aria-current="true"
             >
                 <div class="d-flex w-100 justify-content-between">
@@ -35,8 +35,11 @@
 <script setup lang="ts">
 
 import { onMounted, Ref, ref } from "vue";
-import ThemeSwitcher from "../helper/ThemeSwitcher"
 import BsLink from "./bsLink.vue";
+
+import { useDarkmode } from "../helper/useDarkmode"
+
+const { isDarkmode } = useDarkmode()
 
 interface IProject {
     title: String,

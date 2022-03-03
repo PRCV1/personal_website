@@ -1,46 +1,20 @@
 <template>
-    <header class="py-5" :class="[ThemeSwitcher.isDarkmode.value ? 'bg-dark' : '']">
+    <header class="py-5" :class="[isDarkmode ? 'bg-dark' : '']">
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <!-- <div class="row">
-                        <div class="col">
+                    <div
+                        class="d-flex align-items-center"
+                        :class="[isDarkmode ? 'text-white' : 'text-dark']"
+                    >
+                        <div class="flex-shrink-0">
                             <img
                                 class="img-fluid rounded-circle"
                                 src="https://lukasmueller.info/_nuxt/img/77839d1.jpg"
                                 width="175"
                             />
                         </div>
-                        <div
-                            class="col"
-                            :class="[ThemeSwitcher.isDarkmode.value ? 'text-white' : 'text-dark']"
-                        >
-                            <h1>Lukas Müller</h1>
-                            <h2>Anwendungsentwickler</h2>
-                            <ul class="list-inline">
-                                <li
-                                    v-for="(item, index) in socialLinks"
-                                    :key="index"
-                                    class="list-inline-item"
-                                >
-                                    <a
-                                        :href="String(item.url)"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                    >
-                                        <i style="font-size: 2rem;" :class="item.icon"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>-->
-                    <div class="d-flex align-items-center" :class="[ThemeSwitcher.isDarkmode.value ? 'text-white' : 'text-dark']">
-                        <div class="flex-shrink-0">
-                            <img class="img-fluid rounded-circle" src="https://lukasmueller.info/_nuxt/img/77839d1.jpg" width="175" />
-                        </div>
-                        <div
-                            class="flex-grow-1 ms-3"
-                        >
+                        <div class="flex-grow-1 ms-3">
                             <h1>Lukas Müller</h1>
                             <h2>Anwendungsentwickler</h2>
                             <ul class="list-inline">
@@ -62,7 +36,20 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-auto">
-                    <BsSwitch label="Darkmode" />
+                    <div class="form-check">
+                        <input
+                            v-model="isDarkmode"
+                            @input="e => setIsDarkmode(!isDarkmode)"
+                            class="form-check-input"
+                            type="checkbox"
+                            id="chkDarkmode"
+                        />
+                        <label
+                            class="form-check-label"
+                            :class="[isDarkmode ? 'text-white' : 'text-dark']"
+                            for="chkDarkmode"
+                        >Darkmode</label>
+                    </div>
                 </div>
             </div>
         </div>
@@ -70,8 +57,9 @@
 </template>
 
 <script setup lang="ts">
-import ThemeSwitcher from '../helper/ThemeSwitcher';
-import BsSwitch from './bsSwitch.vue';
+import { useDarkmode } from "../helper/useDarkmode"
+
+const { isDarkmode, setIsDarkmode } = useDarkmode()
 
 interface ISocialMedia {
     url: String,
