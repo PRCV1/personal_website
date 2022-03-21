@@ -1,7 +1,7 @@
 <template>
     <a :href="url" target="_blank" rel="noopener noreferrer">
         <i v-if="showIcon" class="bi bi-box-arrow-up-right me-1"></i>
-        {{ text }}
+        {{text}}
     </a>
 </template>
 

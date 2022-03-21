@@ -14,13 +14,18 @@
       <div class="col-lg-4 col-12">
         <Section title="Kontakt">
           <ol class="list-unstyled">
-            <li>test</li>
-            <li>test</li>
-            <li>test</li>
-            <li>test</li>
-            <li>test</li>
-            <li>test</li>
-            <li>test</li>
+            <li class="mb-3">
+              <i class="bi bi-geo-alt-fill"></i>
+              Philippsthal (Werra), DE
+            </li>
+            <li class="mb-3">
+              <i class="bi bi-geo-alt-fill"></i>
+              Philippsthal (Werra), DE
+            </li>
+            <li>
+              <i class="bi bi-link-45deg"></i>
+              <BsLink class="text-decoration-none" :show-icon="false" text="lukasmueller.info" url="https://lukasmueller.info" />
+            </li>
           </ol>
         </Section>
         <Section title="Fähigkeiten">
@@ -31,6 +36,9 @@
         </Section>
         <Section title="Ausbildung">
           <Education />
+        </Section>
+        <Section title="Credits">
+
         </Section>
       </div>
     </div>
@@ -45,6 +53,7 @@ import BsProgressbar from "./components/bsProgressbar.vue";
 import Education from "./components/Education.vue";
 import Projects from "./components/Projects.vue";
 import { onBeforeMount } from "vue";
+import BsLink from "./components/bsLink.vue";
 
 onBeforeMount(() => {
   

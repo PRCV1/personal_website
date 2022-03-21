@@ -1,12 +1,17 @@
 [
     {
-        "title": "test",
-        "description": "test2",
-        "url": "url"
+        "title": "VS Code Hardwaremonitor",
+        "description": "Ein kleines Plugin, welches die aktuelle Systemlast in der Statusbar anzeigt. Konfigurierbar.",
+        "url": "https://github.com/PRCV1/hardwaremonitor"
     },
     {
-        "title": "a",
-        "description": "b",
-        "url": "c"
+        "title": "VS Code Hardwaremonitor",
+        "description": "Ein kleines Plugin, welches die aktuelle Systemlast in der Statusbar anzeigt. Konfigurierbar.",
+        "url": "https://github.com/PRCV1/hardwaremonitor"
+    },
+    {
+        "title": "VS Code Hardwaremonitor",
+        "description": "Ein kleines Plugin, welches die aktuelle Systemlast in der Statusbar anzeigt. Konfigurierbar.",
+        "url": "https://github.com/PRCV1/hardwaremonitor"
     }
 ]
