@@ -1,5 +1,5 @@
 <template>
-    <header class="py-5" :class="[isDarkmode ? 'bg-dark' : '']">
+    <header class="py-5" :class="[isDarkmode ? 'bg-dark' : 'bg-light']">
         <div class="container">
             <div class="row">
                 <div class="col">

@@ -1,8 +1,6 @@
 <template>
-    <section class="mb-5 p-4" :class="[isDarkmode ? 'bg-dark' : 'bg-secondary']" >
-        <h2 :class="[isDarkmode ? 'text-white' : 'text-dark']">
-            {{ title }}
-        </h2>
+    <section class="mb-5 p-4 shadow-sm rounded" :class="[isDarkmode ? 'bg-dark' : 'bg-light']">
+        <h2 :class="[isDarkmode ? 'text-white' : 'text-dark']">{{ title }}</h2>
         <div :class="[isDarkmode ? 'text-white-50' : 'text-dark']">
             <slot></slot>
         </div>

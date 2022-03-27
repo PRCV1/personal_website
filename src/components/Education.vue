@@ -6,6 +6,7 @@
             :class="[isDarkmode ? 'text-white-50' : 'text-dark']"
             class="border-0 list-group-item list-group-item-dark bg-transparent d-flex justify-content-between align-items-start"
         >
+            <i class="bi bi-mortarboard"></i>
             <div class="ms-2 me-auto">
                 <div class="fw-bold">{{ item.name }}</div>
                 {{ `${item.where} (${item.fromYear} - ${item.toYear ?? "heute"})` }}

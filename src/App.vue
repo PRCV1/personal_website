@@ -7,7 +7,7 @@
           Ich bin Softwareentwickler bei AFS-Software GmbH & Co.KG, einer Softwarefirma welche sich auf die Entwicklung und Vertrieb einer eigenen Warenwirtschaft und Kasse spezialisiert hat.
           Ich habe über 5 Jahre Erfahrung in der Backend-Entwicklung und arbeite mit verschiedenen Kunden in ganz Deutschland zusammen. Ich bin auch ein Fan von moderner App-Entwicklung mit Flutter.
         </Section>
-        <Section title="Projekte">
+        <Section title="Meine Projekte">
           <Projects />
         </Section>
       </div>
@@ -52,11 +52,16 @@ import Section from "./components/Section.vue";
 import BsProgressbar from "./components/bsProgressbar.vue";
 import Education from "./components/Education.vue";
 import Projects from "./components/Projects.vue";
-import { onBeforeMount } from "vue";
+import { onBeforeMount, watch } from "vue";
 import BsLink from "./components/bsLink.vue";
 
-onBeforeMount(() => {
-  
+import { useDarkmode } from "./helper/useDarkmode"
+
+const {isDarkmode} = useDarkmode();
+
+watch(isDarkmode, (newValue: Boolean, oldValue: Boolean) => {
+  let cssClass = newValue ? "bg-dark-2" : "bg-light-2"
+  document.querySelector("body")!.classList.value = cssClass
 })
 
 </script>
