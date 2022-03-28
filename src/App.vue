@@ -1,4 +1,7 @@
 <template>
+  <metainfo>
+     <template v-slot:title="{ content }">{{ content  }}</template>
+  </metainfo>
   <Header />
   <div class="container py-5">
     <div class="row">
@@ -56,8 +59,17 @@ import { onBeforeMount, watch } from "vue";
 import BsLink from "./components/bsLink.vue";
 
 import { useDarkmode } from "./helper/useDarkmode"
+import { useMeta } from "vue-meta";
 
 const {isDarkmode} = useDarkmode();
+
+useMeta({
+  title: "Lukas Müller",
+  htmlAttrs: {
+    lang: "de",
+    amp: true
+  }
+})
 
 watch(isDarkmode, (newValue: Boolean, oldValue: Boolean) => {
   let cssClass = newValue ? "bg-dark-2" : "bg-light-2"
