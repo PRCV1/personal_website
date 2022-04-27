@@ -36,19 +36,18 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-auto">
-                    <div class="form-check">
+                    <div class="form-check form-switch" @click="setIsDarkmode(!isDarkmode)">
                         <input
-                            v-model="isDarkmode"
-                            @input="e => setIsDarkmode(!isDarkmode)"
                             class="form-check-input"
                             type="checkbox"
-                            id="chkDarkmode"
+                            id="flexSwitchCheckChecked"
+                            v-model="isDarkmode"
                         />
                         <label
-                            class="form-check-label"
                             :class="[isDarkmode ? 'text-white' : 'text-dark']"
-                            for="chkDarkmode"
-                        >Darkmode</label>
+                            class="form-check-label"
+                            for="flexSwitchCheckChecked"
+                        > Darkmode </label>
                     </div>
                 </div>
             </div>
