@@ -1,6 +1,6 @@
 <template>
-    <div class="container">
-        <div class="row">
+    <div class="container py-5">
+        <div class="row" :class="[isDarkmode ? 'bg-dark' : 'bg-light']">
         <div class="col-12 mb-3">
             <SimpleTextblock title="Datenschutz auf einen Blick">
                 <SimpleTextblock
