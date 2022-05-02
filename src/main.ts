@@ -19,11 +19,11 @@ const router = createRouter({
         },
         {
             path: "/impressum",
-            component: Impressum
+            component: () => import("./pages/Impressum.vue")
         },
         {
             path: "/datenschutz",
-            component: Datenschutz
+            component: () => import("./pages/Datenschutz.vue")
         }
     ]
 })

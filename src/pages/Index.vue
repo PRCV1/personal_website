@@ -17,10 +17,6 @@
                             <i class="bi bi-geo-alt-fill"></i>
                             Philippsthal (Werra), DE
                         </li>
-                        <li class="mb-3">
-                            <i class="bi bi-geo-alt-fill"></i>
-                            Philippsthal (Werra), DE
-                        </li>
                         <li>
                             <i class="bi bi-link-45deg"></i>
                             <BsLink
@@ -53,4 +49,10 @@ import Projects from "../components/Projects.vue";
 import BsProgressbar from "../components/bsProgressbar.vue";
 import BsLink from "../components/bsLink.vue";
 import Section from "../components/Section.vue";
+import { onMounted } from "vue";
+
+onMounted(() => {
+    setTimeout(() => window.scrollTo({top: 0}), 150)
+})
+
 </script>

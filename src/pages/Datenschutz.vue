@@ -139,6 +139,12 @@
 import { useDarkmode } from "../helper/useDarkmode"
 import SimpleTextblock from "../components/SimpleTextblock.vue";
 import TitleSize from '../helper/TitleSize';
+import { onMounted } from "vue";
 
-const { isDarkmode, setIsDarkmode } = useDarkmode()
+const { isDarkmode } = useDarkmode()
+
+onMounted(() => {
+    setTimeout(() => window.scrollTo({top: 0}), 150)
+})
+
 </script>
