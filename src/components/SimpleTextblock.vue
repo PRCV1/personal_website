@@ -1,19 +1,19 @@
 <template>
     <div>
-        <h1 v-if="titleSize === TitleSize.h1" class="fw-bold" :class="[isDarkmode ? 'text-white-50' : 'text-dark']">{{
+        <h1 v-if="titleSize === TitleSize.h1" class="fw-bold" :class="textClass">{{
                 title
         }}</h1>
         <h2 v-else-if="titleSize === TitleSize.h2" class="fw-bold"
-            :class="[isDarkmode ? 'text-white-50' : 'text-dark']">{{ title }}</h2>
+            :class="textClass">{{ title }}</h2>
         <h3 v-else-if="titleSize === TitleSize.h3" class="fw-bold"
-            :class="[isDarkmode ? 'text-white-50' : 'text-dark']">{{ title }}</h3>
+            :class="textClass">{{ title }}</h3>
         <h4 v-else-if="titleSize === TitleSize.h4" class="fw-bold"
-            :class="[isDarkmode ? 'text-white-50' : 'text-dark']">{{ title }}</h4>
+            :class="textClass">{{ title }}</h4>
         <h5 v-else-if="titleSize === TitleSize.h5" class="fw-bold"
-            :class="[isDarkmode ? 'text-white-50' : 'text-dark']">{{ title }}</h5>
+            :class="textClass">{{ title }}</h5>
         <h6 v-else-if="titleSize === TitleSize.h6" class="fw-bold"
-            :class="[isDarkmode ? 'text-white-50' : 'text-dark']">{{ title }}</h6>
-        <p class="text-start" :class="[isDarkmode ? 'text-white-50' : 'text-dark']">
+            :class="textClass">{{ title }}</h6>
+        <p class="text-start" :class="textClass">
             <slot></slot>
         </p>
     </div>
@@ -21,10 +21,9 @@
 
 <script setup lang="ts">
 import TitleSize from "../helper/TitleSize"
-
 import { useDarkmode } from "../helper/useDarkmode"
 
-const { isDarkmode } = useDarkmode();
+const { isDarkmode, textClass } = useDarkmode();
 
 defineProps({
     title: {

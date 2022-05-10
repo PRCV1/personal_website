@@ -1,6 +1,6 @@
 <template>
     <div class="container py-5">
-        <div class="row" :class="[isDarkmode ? 'bg-dark' : 'bg-light']">
+        <div class="row" :class="bgClass">
             <div class="col-12 mb-3">
                 <SimpleTextblock title="Kontakt">
                     Lukas Müller
@@ -146,7 +146,7 @@ import { useDarkmode } from "../helper/useDarkmode"
 import SimpleTextblock from "../components/SimpleTextblock.vue";
 import { onMounted } from "vue";
 
-const { isDarkmode } = useDarkmode()
+const { isDarkmode, bgClass } = useDarkmode()
 
 onMounted(() => {
     setTimeout(() => window.scrollTo({top: 0}), 150)

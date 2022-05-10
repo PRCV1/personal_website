@@ -3,8 +3,8 @@
         <div class="row">
             <div class="col-lg-8 col-12">
                 <Section title="Über mich">
-                    Ich bin Softwareentwickler bei AFS-Software GmbH & Co.KG, einer Softwarefirma welche sich auf die Entwicklung und Vertrieb einer eigenen Warenwirtschaft und Kasse spezialisiert hat.
-                    Ich habe über 5 Jahre Erfahrung in der Backend-Entwicklung und arbeite mit verschiedenen Kunden in ganz Deutschland zusammen. Ich bin auch ein Fan von moderner App-Entwicklung mit Flutter.
+                    Ich bin Softwareentwickler bei AFS-Software GmbH & Co.KG, einer Softwarefirma im Zentrum von Deutschland, welche sich auf die Entwicklung und Vertrieb einer eigenen Warenwirtschaft sowie eines Kassensystems spezialisiert hat.
+                    Ich habe über 5 Jahre Erfahrung in der Backend-Entwicklung und arbeite mit verschiedenen Kunden in ganz Deutschland zusammen. Auch bin ich ein großer Fan von moderner App-Entwicklung mit Flutter.
                 </Section>
                 <Section title="Meine Projekte">
                     <Projects />
@@ -17,14 +17,17 @@
                             <i class="bi bi-geo-alt-fill"></i>
                             Philippsthal (Werra), DE
                         </li>
-                        <li>
-                            <i class="bi bi-link-45deg"></i>
+                        <li class="mb-3">
                             <BsLink
                                 class="text-decoration-none"
-                                :show-icon="false"
+                                :show-icon="true"
+                                icon="bi bi-link-45deg"
                                 text="lukasmueller.info"
                                 url="https://lukasmueller.info"
                             />
+                        </li>
+                        <li class="mb-3">
+                            <BsLink class="text-decoration-none" :show-icon="true" icon="bi bi-envelope" url="mailto:muellerlukas@posteo.de?subject=Kontaktanfrage über Webseite" text="Kontaktanfrage" />
                         </li>
                     </ol>
                 </Section>
@@ -37,7 +40,15 @@
                 <Section title="Ausbildung">
                     <Education />
                 </Section>
-                <Section title="Credits"></Section>
+                <Section title="Credits">
+                    <ol class="list-unstyled">
+                        <li class="mb-3">
+                            <BsLink class="text-decoration-none" :show-icon="true" icon="bi bi-bootstrap" text="Bootstrap 5" url="https://getbootstrap.com/" />
+                        </li>
+                        <li class="mb-3">
+                            <BsLink class="text-decoration-none" :show-icon="false" text="Vue 3" url="https://vuejs.org/" /></li>
+                    </ol>
+                </Section>
             </div>
         </div>
     </div>

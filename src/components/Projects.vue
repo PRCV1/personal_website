@@ -4,7 +4,7 @@
         <div class="list-group my-2" v-for="(item, index) in projects" :key="index">
             <div
                 class="list-group-item border-0 bg-transparent"
-                :class="[isDarkmode ? 'text-white-50' : 'text-dark']"
+                :class="textClass"
                 aria-current="true"
             >
                 <div class="d-flex w-100 justify-content-between">
@@ -16,7 +16,7 @@
                         class="text-decoration-none"
                         :show-icon="true"
                         :url="String(item.url)"
-                        text="jetzt Herunterladen"
+                        text="mehr Infos ..."
                     />
                 </small>
             </div>
@@ -44,7 +44,7 @@ import BsLink from "./bsLink.vue";
 
 import { useDarkmode } from "../helper/useDarkmode"
 
-const { isDarkmode } = useDarkmode()
+const { isDarkmode, textClass } = useDarkmode()
 
 interface IProject {
     title: String,
