@@ -1,5 +1,16 @@
 @import "../node_modules/bootstrap/scss/bootstrap";
 @import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/root";
+
+.bg-dark-trans {
+    background-color: $dark;
+    transition: all 0.5s ease;
+}
+
+.bg-light-trans {
+    background-color: $light;
+    transition: all 0.5s ease;
+}
 
 .bg-dark-2 {
     background-color: #17181b;

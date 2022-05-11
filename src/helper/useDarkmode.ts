@@ -8,7 +8,7 @@ const bgClass = ref(Boolean(localStorage.getItem("darkmode") ?? listener.matches
 
 watch(isDarkmode, (newValue: boolean) => {
     textClass.value = newValue ? "text-white-50" : "text-dark"
-    bgClass.value = newValue ? "bg-dark" : "bg-light"
+    bgClass.value = newValue ? "bg-dark-trans" : "bg-light-trans"
 })
 
 const setIsDarkmode = (value: boolean) => {

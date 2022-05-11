@@ -3,16 +3,11 @@
         <h1 v-if="titleSize === TitleSize.h1" class="fw-bold" :class="textClass">{{
                 title
         }}</h1>
-        <h2 v-else-if="titleSize === TitleSize.h2" class="fw-bold"
-            :class="textClass">{{ title }}</h2>
-        <h3 v-else-if="titleSize === TitleSize.h3" class="fw-bold"
-            :class="textClass">{{ title }}</h3>
-        <h4 v-else-if="titleSize === TitleSize.h4" class="fw-bold"
-            :class="textClass">{{ title }}</h4>
-        <h5 v-else-if="titleSize === TitleSize.h5" class="fw-bold"
-            :class="textClass">{{ title }}</h5>
-        <h6 v-else-if="titleSize === TitleSize.h6" class="fw-bold"
-            :class="textClass">{{ title }}</h6>
+        <h2 v-else-if="titleSize === TitleSize.h2" class="fw-bold" :class="textClass">{{ title }}</h2>
+        <h3 v-else-if="titleSize === TitleSize.h3" class="fw-bold" :class="textClass">{{ title }}</h3>
+        <h4 v-else-if="titleSize === TitleSize.h4" class="fw-bold" :class="textClass">{{ title }}</h4>
+        <h5 v-else-if="titleSize === TitleSize.h5" class="fw-bold" :class="textClass">{{ title }}</h5>
+        <h6 v-else-if="titleSize === TitleSize.h6" class="fw-bold" :class="textClass">{{ title }}</h6>
         <p class="text-start" :class="textClass">
             <slot></slot>
         </p>

@@ -1,11 +1,7 @@
 <template>
     <ol v-if="edus.length > 0" class="list-group">
-        <li
-            v-for="(item, index) in edus"
-            :key="index"
-            :class="[isDarkmode ? 'text-white-50' : 'text-dark']"
-            class="border-0 list-group-item list-group-item-dark bg-transparent d-flex justify-content-between align-items-start"
-        >
+        <li v-for="(item, index) in edus" :key="index" :class="textClass"
+            class="border-0 list-group-item list-group-item-dark bg-transparent d-flex justify-content-between align-items-start">
             <i class="bi bi-mortarboard"></i>
             <div class="ms-2 me-auto">
                 <div class="fw-bold">{{ item.name }}</div>
@@ -23,7 +19,7 @@
 import { onMounted, ref, Ref } from "vue";
 import { useDarkmode } from "../helper/useDarkmode"
 
-const { isDarkmode } = useDarkmode()
+const { textClass, bgClass } = useDarkmode()
 
 interface IEducation {
     name: String,

@@ -1,7 +1,8 @@
 <template>
-    <footer class="py-5" :class="[isDarkmode ? 'bg-dark' : 'bg-light']">
+    <footer class="py-3" :class="bgClass">
         <div class="container d-flex justify-content-center">
-            <router-link v-for="(item, index) in routes" :key="index" :to="item.to" class="p-1" :class="[isCurrentRoute(item.to) ? '' : 'text-decoration-none']">
+            <router-link v-for="(item, index) in routes" :key="index" :to="item.to" class="p-1"
+                :class="[isCurrentRoute(item.to) ? '' : 'text-decoration-none']">
                 {{ item.text }}
             </router-link>
         </div>
@@ -13,7 +14,7 @@ import { ref, watch } from 'vue';
 import { RouterLink, useRouter } from 'vue-router';
 import { useDarkmode } from "../helper/useDarkmode"
 
-const { isDarkmode, setIsDarkmode } = useDarkmode()
+const { isDarkmode, setIsDarkmode, bgClass } = useDarkmode()
 const { currentRoute } = useRouter()
 
 const routes = [
@@ -31,7 +32,7 @@ const routes = [
     }
 ]
 
-function isCurrentRoute(url:String): boolean {
+function isCurrentRoute(url: String): boolean {
     return currentRoute.value.path === url
 }
 

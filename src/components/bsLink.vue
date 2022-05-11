@@ -1,7 +1,7 @@
 <template>
     <i v-if="showIcon" :class="getIcon()"></i>
-    <a :href="url" target="_blank" rel="noopener noreferrer">
-        {{text}}
+    <a class="text-decoration-none" :href="url" target="_blank" rel="noopener noreferrer">
+        {{ text }}
     </a>
 </template>
 
@@ -10,7 +10,7 @@
 function getIcon(): String {
     var value = (props.icon ?? "bi bi-box-arrow-up-right") + " me-1"
     console.log(value);
-    
+
     return value
 }
 

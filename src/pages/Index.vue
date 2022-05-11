@@ -3,8 +3,11 @@
         <div class="row">
             <div class="col-lg-8 col-12">
                 <Section title="Über mich">
-                    Ich bin Softwareentwickler bei AFS-Software GmbH & Co.KG, einer Softwarefirma im Zentrum von Deutschland, welche sich auf die Entwicklung und Vertrieb einer eigenen Warenwirtschaft sowie eines Kassensystems spezialisiert hat.
-                    Ich habe über 5 Jahre Erfahrung in der Backend-Entwicklung und arbeite mit verschiedenen Kunden in ganz Deutschland zusammen. Auch bin ich ein großer Fan von moderner App-Entwicklung mit Flutter.
+                    Ich bin Softwareentwickler bei AFS-Software GmbH & Co.KG, einer Softwarefirma im Zentrum von
+                    Deutschland, welche sich auf die Entwicklung und Vertrieb einer eigenen Warenwirtschaft sowie eines
+                    Kassensystems spezialisiert hat.
+                    Ich habe über 5 Jahre Erfahrung in der Backend-Entwicklung und arbeite mit verschiedenen Kunden in
+                    ganz Deutschland zusammen. Auch bin ich ein großer Fan von moderner App-Entwicklung mit Flutter.
                 </Section>
                 <Section title="Meine Projekte">
                     <Projects />
@@ -18,16 +21,13 @@
                             Philippsthal (Werra), DE
                         </li>
                         <li class="mb-3">
-                            <BsLink
-                                class="text-decoration-none"
-                                :show-icon="true"
-                                icon="bi bi-link-45deg"
-                                text="lukasmueller.info"
-                                url="https://lukasmueller.info"
-                            />
+                            <BsLink class="text-decoration-none" :show-icon="true" icon="bi bi-link-45deg"
+                                text="lukasmueller.info" url="https://lukasmueller.info" />
                         </li>
                         <li class="mb-3">
-                            <BsLink class="text-decoration-none" :show-icon="true" icon="bi bi-envelope" url="mailto:muellerlukas@posteo.de?subject=Kontaktanfrage über Webseite" text="Kontaktanfrage" />
+                            <BsLink class="text-decoration-none" :show-icon="true" icon="bi bi-envelope"
+                                url="mailto:muellerlukas@posteo.de?subject=Kontaktanfrage über Webseite"
+                                text="Kontaktanfrage" />
                         </li>
                     </ol>
                 </Section>
@@ -41,12 +41,30 @@
                     <Education />
                 </Section>
                 <Section title="Credits">
-                    <ol class="list-unstyled">
+                    <!-- <ol class="list-unstyled">
                         <li class="mb-3">
                             <BsLink class="text-decoration-none" :show-icon="true" icon="bi bi-bootstrap" text="Bootstrap 5" url="https://getbootstrap.com/" />
                         </li>
                         <li class="mb-3">
                             <BsLink class="text-decoration-none" :show-icon="false" text="Vue 3" url="https://vuejs.org/" /></li>
+                    </ol> -->
+                    <ol class="list-group">
+                        <li :class="textClass"
+                            class="border-0 list-group-item list-group-item-dark bg-transparent d-flex justify-content-between align-items-start">
+                            <i class="bi bi-bootstrap"></i>
+                            <div class="ms-2 me-auto">
+                                <div class="fw-bold">Bootstrap</div>
+                                    CSS-Framework
+                            </div>
+                        </li>
+                        <li :class="textClass"
+                            class="border-0 list-group-item list-group-item-dark bg-transparent d-flex justify-content-between align-items-start">
+                            <i class="bi bi-filetype-js"></i>
+                            <div class="ms-2 me-auto">
+                                <div class="fw-bold">Vue 3</div>
+                                    JS-Framework
+                            </div>
+                        </li>
                     </ol>
                 </Section>
             </div>
@@ -61,9 +79,11 @@ import BsProgressbar from "../components/bsProgressbar.vue";
 import BsLink from "../components/bsLink.vue";
 import Section from "../components/Section.vue";
 import { onMounted } from "vue";
+import { useDarkmode } from "../helper/useDarkmode"
 
+const { textClass, bgClass } = useDarkmode()
 onMounted(() => {
-    setTimeout(() => window.scrollTo({top: 0}), 150)
+    setTimeout(() => window.scrollTo({ top: 0 }), 150)
 })
 
 </script>

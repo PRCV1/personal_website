@@ -13,8 +13,6 @@ import { useDarkmode } from "./helper/useDarkmode"
 
 const { isDarkmode } = useDarkmode();
 
-
-
 onBeforeMount(() => {
   toggleMode(isDarkmode.value)
 })
