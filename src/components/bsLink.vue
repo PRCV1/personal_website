@@ -9,8 +9,6 @@
 
 function getIcon(): String {
     var value = (props.icon ?? "bi bi-box-arrow-up-right") + " me-1"
-    console.log(value);
-
     return value
 }
 

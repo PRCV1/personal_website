@@ -10,17 +10,20 @@
 </template>
 
 <script setup lang="ts">
-import { ref, watch } from 'vue';
 import { RouterLink, useRouter } from 'vue-router';
 import { useDarkmode } from "../helper/useDarkmode"
 
-const { isDarkmode, setIsDarkmode, bgClass } = useDarkmode()
+const { bgClass } = useDarkmode()
 const { currentRoute } = useRouter()
 
 const routes = [
     {
         to: "/",
         text: "Start"
+    },
+    {
+        to: "/itservice",
+        text: "IT-Service"
     },
     {
         to: "/impressum",

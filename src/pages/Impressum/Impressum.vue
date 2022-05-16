@@ -166,9 +166,9 @@
 </template>
 
 <script setup lang="ts">
-import { useDarkmode } from "../helper/useDarkmode"
-import SimpleTextblock from "../components/SimpleTextblock.vue"
-import Section from "../components/Section.vue"
+import { useDarkmode } from "../../helper/useDarkmode"
+import SimpleTextblock from "../../components/SimpleTextblock.vue"
+import Section from "../../components/Section.vue"
 import { onMounted } from "vue";
 
 const { isDarkmode, bgClass } = useDarkmode()

@@ -6,9 +6,7 @@ import "bootstrap";
 import "bootstrap-icons/font/bootstrap-icons.css"
 import "../scss/custom.scss"
 
-import Index from "./pages/Index.vue"
-import Impressum from "./pages/Impressum.vue"
-import Datenschutz from "./pages/Datenschutz.vue"
+import Index from "./pages/Index/Index.vue"
 
 const router = createRouter({
     history: createWebHistory(),
@@ -19,11 +17,15 @@ const router = createRouter({
         },
         {
             path: "/impressum",
-            component: () => import("./pages/Impressum.vue")
+            component: () => import("./pages/Impressum/Impressum.vue")
         },
         {
             path: "/datenschutz",
-            component: () => import("./pages/Datenschutz.vue")
+            component: () => import("./pages/Datenschutz/Datenschutz.vue")
+        },
+        {
+            path: "/itservice",
+            component: () => import("./pages/IT-Service/ItService.vue")
         }
     ]
 })

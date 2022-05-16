@@ -28,13 +28,11 @@
 </template>
 
 <script setup lang="ts">
+import { onMounted, Ref, ref } from "vue"
+import BsLink from "../../../components/bsLink.vue"
+import { useDarkmode } from "../../../helper/useDarkmode"
 
-import { onMounted, Ref, ref } from "vue";
-import BsLink from "./bsLink.vue";
-
-import { useDarkmode } from "../helper/useDarkmode"
-
-const { isDarkmode, textClass } = useDarkmode()
+const { textClass } = useDarkmode()
 
 interface IProject {
     title: String,

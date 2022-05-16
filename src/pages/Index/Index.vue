@@ -32,40 +32,13 @@
                     </ol>
                 </Section>
                 <Section title="Fähigkeiten">
-                    <BsProgressbar label="VB.NET/C#" value="50" />
-                    <BsProgressbar label="SQL (MySQL/MSSQL)" value="60" />
-                    <BsProgressbar label="JavaScript" value="50" />
-                    <BsProgressbar label="EF Core" value="50" />
+                    <Skills />
                 </Section>
                 <Section title="Ausbildung">
                     <Education />
                 </Section>
                 <Section title="Credits">
-                    <!-- <ol class="list-unstyled">
-                        <li class="mb-3">
-                            <BsLink class="text-decoration-none" :show-icon="true" icon="bi bi-bootstrap" text="Bootstrap 5" url="https://getbootstrap.com/" />
-                        </li>
-                        <li class="mb-3">
-                            <BsLink class="text-decoration-none" :show-icon="false" text="Vue 3" url="https://vuejs.org/" /></li>
-                    </ol> -->
-                    <ol class="list-group">
-                        <li :class="textClass"
-                            class="border-0 list-group-item list-group-item-dark bg-transparent d-flex justify-content-between align-items-start">
-                            <i class="bi bi-bootstrap"></i>
-                            <div class="ms-2 me-auto">
-                                <div class="fw-bold">Bootstrap</div>
-                                    CSS-Framework
-                            </div>
-                        </li>
-                        <li :class="textClass"
-                            class="border-0 list-group-item list-group-item-dark bg-transparent d-flex justify-content-between align-items-start">
-                            <i class="bi bi-filetype-js"></i>
-                            <div class="ms-2 me-auto">
-                                <div class="fw-bold">Vue 3</div>
-                                    JS-Framework
-                            </div>
-                        </li>
-                    </ol>
+                    <Credits />
                 </Section>
             </div>
         </div>
@@ -73,15 +46,14 @@
 </template>
 
 <script setup lang="ts">
-import Education from "../components/Education.vue";
-import Projects from "../components/Projects.vue";
-import BsProgressbar from "../components/bsProgressbar.vue";
-import BsLink from "../components/bsLink.vue";
-import Section from "../components/Section.vue";
+import Education from "./components/Education.vue"
+import Projects from "./components/Projects.vue"
+import Credits from "./components/Credits.vue"
+import Skills from "./components/Skills.vue"
+import BsLink from "../../components/bsLink.vue"
+import Section from "../../components/Section.vue"
 import { onMounted } from "vue";
-import { useDarkmode } from "../helper/useDarkmode"
 
-const { textClass, bgClass } = useDarkmode()
 onMounted(() => {
     setTimeout(() => window.scrollTo({ top: 0 }), 150)
 })

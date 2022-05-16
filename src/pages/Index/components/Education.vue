@@ -17,7 +17,7 @@
 <script setup lang="ts">
 
 import { onMounted, ref, Ref } from "vue";
-import { useDarkmode } from "../helper/useDarkmode"
+import { useDarkmode } from "../../../helper/useDarkmode"
 
 const { textClass, bgClass } = useDarkmode()
 
