@@ -1,5 +1,5 @@
 <template>
-    <BsProgressbar v-for="(item, index) in skills" :label="item.title" :value="item.value" />
+    <BsProgressbar v-for="(item, index) in skills" :label="String(item.title)" :value="Number(item.value)" />
 </template>
 
 <script setup lang="ts">

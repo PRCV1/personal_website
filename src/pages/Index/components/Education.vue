@@ -31,7 +31,7 @@ interface IEducation {
 const edus: Ref<IEducation[]> = ref([])
 
 onMounted(async () => {
-    var response = await fetch("education.json")
+    var response = await fetch("data/education.json")
     edus.value = Object.assign([], await response.json())
 })
 

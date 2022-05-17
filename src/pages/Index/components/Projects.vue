@@ -43,7 +43,7 @@ interface IProject {
 const projects: Ref<IProject[]> = ref([])
 
 onMounted(async () => {
-    var response = await fetch("projects.json")
+    var response = await fetch("data/projects.json")
     projects.value = Object.assign([], await response.json())
 })
 

@@ -5,7 +5,7 @@
                 <div class="col">
                     <div class="row" :class="textClass">
                         <div class="col-md-2 d-flex justify-content-center">
-                            <img class="img-fluid rounded-circle" src="https://lukasmueller.info/_nuxt/img/77839d1.jpg"
+                            <img class="img-fluid rounded-circle" src="/img/profilbild.jpg"
                                 width="175" />
                         </div>
                         <div class="col-md-10 text-md-start text-center">

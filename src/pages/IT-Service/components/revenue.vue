@@ -25,13 +25,10 @@
 
 <script setup lang="ts">
 import { onMounted, Ref, ref } from 'vue';
-import { DoughnutChart } from 'vue-chart-3';
-import { Chart, ChartData, registerables } from "chart.js";
 import { useDarkmode } from "../../../helper/useDarkmode"
 
 const { textClass } = useDarkmode()
 
-Chart.register(...registerables);
 
 const revenues: Ref<IRevenue[]> = ref([])
 
@@ -42,7 +39,7 @@ interface IRevenue {
 }
 
 onMounted(async () => {
-    var response = await fetch("revenue.json")
+    var response = await fetch("data/revenue.json")
     revenues.value = Object.assign([], await response.json())
 })
 
