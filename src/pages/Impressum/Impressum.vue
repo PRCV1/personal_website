@@ -170,8 +170,13 @@ import { useDarkmode } from "../../helper/useDarkmode"
 import SimpleTextblock from "../../components/SimpleTextblock.vue"
 import Section from "../../components/Section.vue"
 import { onMounted } from "vue";
+import { useHead } from "@vueuse/head";
 
-const { isDarkmode, bgClass } = useDarkmode()
+const { bgClass } = useDarkmode()
+
+useHead({
+    title: "Lukas Müller | Impressum"
+})
 
 onMounted(() => {
     setTimeout(() => window.scrollTo({ top: 0 }), 150)

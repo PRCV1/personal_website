@@ -8,6 +8,7 @@ import "bootstrap-icons/font/bootstrap-icons.css"
 import "../scss/custom.scss"
 
 import Index from "./pages/Index/Index.vue"
+import { createHead } from '@vueuse/head';
 
 const router = createRouter({
     history: createWebHistory(),
@@ -31,8 +32,9 @@ const router = createRouter({
     ]
 })
 
+const head = createHead()
 var app = createApp(App).use(router)
-
+app.use(head)
 app.use(VueMatomo, {
     host: "https://analytics.lukasmueller.info/",
     siteId: 1,

@@ -43,6 +43,11 @@
 import Section from "../../components/Section.vue"
 import Revenue from "./components/Revenue.vue"
 import { onMounted } from "vue";
+import { useHead } from "@vueuse/head";
+
+useHead({
+    title: "IT-Service Lukas Müller"
+})
 
 onMounted(() => {
     setTimeout(() => window.scrollTo({ top: 0 }), 150)

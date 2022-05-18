@@ -53,9 +53,14 @@ import Skills from "./components/Skills.vue"
 import BsLink from "../../components/bsLink.vue"
 import Section from "../../components/Section.vue"
 import { onMounted } from "vue";
+import { useHead } from "@vueuse/head"
 
 onMounted(() => {
     setTimeout(() => window.scrollTo({ top: 0 }), 150)
+})
+
+useHead({
+    title: "Lukas Müller | Anwendungsentwickler"
 })
 
 </script>

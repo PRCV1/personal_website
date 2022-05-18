@@ -19,7 +19,7 @@
 import { onMounted, ref, Ref } from "vue";
 import { useDarkmode } from "../../../helper/useDarkmode"
 
-const { textClass, bgClass } = useDarkmode()
+const { textClass } = useDarkmode()
 
 interface IEducation {
     name: String,

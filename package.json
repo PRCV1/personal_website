@@ -1,14 +1,16 @@
 {
   "name": "personal_website_single",
-  "private": true,
   "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "dev": "vite --host",
     "build": "vue-tsc --noEmit && vite build",
-    "preview": "vite preview"
+    "dev": "vite --host",
+    "preview": "vite preview",
+    "sitemap": "vue-cli-service sitemap"
   },
   "dependencies": {
     "@popperjs/core": "^2.11.2",
+    "@vueuse/head": "^0.7.6",
     "bootstrap": "^5.1.3",
     "bootstrap-icons": "^1.8.1",
     "vue": "^3.2.25",

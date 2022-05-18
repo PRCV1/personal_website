@@ -296,8 +296,13 @@ import SimpleTextblock from "../../components/SimpleTextblock.vue";
 import Section from "../../components/Section.vue"
 import TitleSize from '../../helper/TitleSize';
 import { onMounted } from "vue";
+import { useHead } from "@vueuse/head";
 
 const { isDarkmode, bgClass } = useDarkmode()
+
+useHead({
+    title: "Lukas Müller | Datenschutz"
+})
 
 onMounted(() => {
     setTimeout(() => window.scrollTo({ top: 0 }), 150)
